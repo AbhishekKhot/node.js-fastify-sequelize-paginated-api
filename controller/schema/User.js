@@ -29,8 +29,7 @@ const getAllUserSchema = {
     schema: {
         response: {
             200: {
-                type: 'array',
-                users: User
+                type: 'object'
             }
         }
     }
