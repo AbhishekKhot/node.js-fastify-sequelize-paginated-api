@@ -9,7 +9,7 @@ const {
 } = require('../controller/schema/User')
 
 module.exports = (fastify, options, done) => {
-    fastify.get('/users', {
+    fastify.get('/users/:limit/:offset', {
         schema: getAllUserSchema,
         handler: GetAllUserHandler
     })

@@ -7,7 +7,7 @@ async function AddNewUserHandler(request, reply) {
 }
 
 async function GetAllUserHandler(request, reply) {
-    const users = await userService.getAllUsers()
+    const users = await userService.getAllUsers(request.params)
     reply.status(HTTPStatus.OK.code).send({ users })
 }
 
